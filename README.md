@@ -1,12 +1,12 @@
 # Introduction
-This is a RISC-V Instruction Set Simulator built in Java for course 02155 Computer Archicture and Engineering at DTU
+This is a RISC-V Instruction Set Simulator built in Java for course 02155 Computer Archicture and Engineering at DTU. The simulator supports the RV32I subset of instructions, the 'exit' ecall and has a CLI for interacting with the simulator which supports breakpoints.
 
 # How to run
 The simulator is built on Java 11. It should also work on Java 8, but no guarantees are made.
 
-To compile the code, run  `make comp`
+To compile, run  `make comp`
 
-To run the code, run `make run`
+To run the simulator, run `make run`
 
 To compile an executable .jar file, run `make jar`. To run this jar file, use `java -jar App.jar`.
 
