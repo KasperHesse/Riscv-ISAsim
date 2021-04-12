@@ -1,0 +1,33 @@
+package test;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+import app.*;
+
+public class SLTTest {
+
+	/**
+	 * Tests whether the "SLT" command and variations hereof work appropriately
+	 * */
+	@Test
+	public void testSLT() throws Exception {
+		RiscV rv = new RiscV("asm/slt");
+		rv.setDebugMode(true);
+		rv.run();
+		int[] Reg = rv.getReg();
+		int[] expected = {
+			0x0, 0x0, 0x0, 0x1,
+			0x2, 0xffffffff, 0x0, 0x0,
+			0x0, 0x0, 0xa, 0x0,
+			0x0, 0x1, 0x1, 0x0,
+			0x1, 0x0, 0x0, 0x0,
+			0x1, 0x0, 0x0, 0x1,
+			0x1, 0x0, 0x1, 0x0,
+			0x1, 0x0, 0x0, 0x0
+		};
+
+		assertArrayEquals(expected, Reg);
+	}
+	
+}
